@@ -3,7 +3,7 @@ const app = express();
 
 
 app.get('*', (req, res) => {
-    res.redirect('https://huehq.com');
+    res.redirect('https://portal-a229a.web.app/login');
 });
 
 
