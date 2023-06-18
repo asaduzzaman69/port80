@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send("Hello World! digital ocean update");
+
+app.get('*', (req, res) => {
+    res.redirect('https://huehq.com');
 });
+
 
 module.exports = app
