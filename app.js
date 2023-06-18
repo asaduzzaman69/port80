@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
-app.get('*', (req, res) => {
-    res.redirect('https://portal-a229a.web.app/login');
-});
+app.get('*',  createProxyMiddleware({ 
+    target: 'https://myreactapp.com', // target host
+    changeOrigin: true, // needed for virtual hosted sites
+}));
 
 
 module.exports = app
