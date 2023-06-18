@@ -40,6 +40,7 @@ console.log({ portalData });
   // This assumes that the target URL is stored in a field named 'targetUrl' in each portal document.
   // If the field has a different name, make sure to change 'targetUrl' to the correct field name.
   const { customDomain } = portalData;
+  console.log({ customDomain });
 
   // Create a proxy middleware for this request
   const proxy = createProxyMiddleware({
